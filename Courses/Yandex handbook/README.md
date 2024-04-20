@@ -1,0 +1,3 @@
+# Basics of algorithms from Yandex
+### [Description]('https://education.yandex.ru/handbook/algorithms'):
+With this handbook, you will learn how to design, optimize, combine and debug algorithms - without being tied to any programming language. In addition to theory, we have also collected practical tasks of varying levels of complexity, and also prepared a system for automatically checking the effectiveness of algorithms - all this will help you consolidate and hone new skills.
