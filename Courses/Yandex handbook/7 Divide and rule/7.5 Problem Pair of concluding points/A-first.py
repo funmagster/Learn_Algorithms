@@ -13,7 +13,6 @@ def calk_min_dist_slow(cords, start, end):
 
 
 def bin_search_elem(cords, start, end, d):
-    # cords_2 = cords[start:end]
     l = start - 1
     r = end - 1
     while r - l > 1:
@@ -26,14 +25,12 @@ def bin_search_elem(cords, start, end, d):
 
 
 def calk_min_dist(n, cords, start):
-    # cords_2 = cords[start:start+n]
     if n == 1:
         return float('inf')
     if n == 2:
         return call_dist(cords[start], cords[start + 1])
 
     start_l, start_r = start, start + n // 2
-    # half_1, half_2 = cords[start_l:start_r], cords[start_r:start_l + n]
     d_min = min(
         calk_min_dist(n // 2, cords, start_l),
         calk_min_dist(n - n // 2, cords, start_r)
