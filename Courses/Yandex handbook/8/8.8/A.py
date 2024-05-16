@@ -1,41 +1,43 @@
-def max_value(expr):
-    n = len(expr) // 2
-    max_vals = [[-float('inf')] * (n + 1) for _ in range(n + 1)]
-    min_vals = [[float('inf')] * (n + 1) for _ in range(n + 1)]
+def evaluate_expression(operands, operators):
+    mins = [[float('inf')] * len(operands) for _ in range(len(operands))]
+    maxs = [[-float('inf')] * len(operands) for _ in range(len(operands))]
 
-    for i in range(n + 1):
-        min_vals[i][i] = int(expr[2 * i])
-        max_vals[i][i] = int(expr[2 * i])
+    for i in range(len(operands)):
+        mins[i][i] = operands[i]
+        maxs[i][i] = operands[i]
 
-    for s in range(1, n + 1):
-        for l in range(1, n - s + 1):
-            r = s + l
+    for s in range(1, len(operands)):
+        for l in range(len(operands) - s):
+            r = l + s
             for m in range(l, r):
-                op = expr[2 * m + 1]
-                first_max = max_vals[l][m]
-                second_max = max_vals[m + 1][r]
-                first_min = min_vals[l][m]
-                second_min = min_vals[m + 1][r]
-                if op == '+':
-                    a = first_min + second_min
-                    b = first_min + second_max
-                    c = first_max + second_min
-                    d = first_max + second_max
-                elif op == '-':
-                    a = first_min - second_min
-                    b = first_min - second_max
-                    c = first_max - second_min
-                    d = first_max - second_max
-                elif op == '*':
-                    a = first_min * second_min
-                    b = first_min * second_max
-                    c = first_max * second_min
-                    d = first_max * second_max
-                min_vals[l][r] = min(min_vals[l][r], a, b, c, d)
-                max_vals[l][r] = min(max_vals[l][r], a, b, c, d)
+                if operators[m] == '+':
+                    a = mins[l][m] + mins[m+1][r]
+                    b = mins[l][m] + maxs[m+1][r]
+                    c = maxs[l][m] + mins[m+1][r]
+                    d = maxs[l][m] + maxs[m+1][r]
+                elif operators[m] == '-':
+                    a = mins[l][m] - mins[m+1][r]
+                    b = mins[l][m] - maxs[m+1][r]
+                    c = maxs[l][m] - mins[m+1][r]
+                    d = maxs[l][m] - maxs[m+1][r]
+                elif operators[m] == '*':
+                    a = mins[l][m] * mins[m+1][r]
+                    b = mins[l][m] * maxs[m+1][r]
+                    c = maxs[l][m] * mins[m+1][r]
+                    d = maxs[l][m] * maxs[m+1][r]
+                mins[l][r] = min(mins[l][r], a, b, c, d)
+                maxs[l][r] = max(maxs[l][r], a, b, c, d)
 
-    return max_vals[0][n]
+    return maxs[0][-1]
 
 
-expression = input()
-print(max_value(expression))
+s = input()
+operands = []
+operators = []
+for i in range(len(s)):
+    if i % 2 == 0:
+        operands.append(int(s[i]))
+    else:
+        operators.append(s[i])
+
+print(evaluate_expression(operands, operators))
