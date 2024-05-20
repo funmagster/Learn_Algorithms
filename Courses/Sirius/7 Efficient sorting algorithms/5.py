@@ -1,0 +1,5 @@
+n1 = int(input())
+first = set(map(int, input().split()))
+n2 = int(input())
+second = set(map(int, input().split()))
+print(("NO", 'YES')[int(first == second)])
