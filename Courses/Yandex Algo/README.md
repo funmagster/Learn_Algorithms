@@ -1,0 +1,2 @@
+# Yandex Algo
+Yandex Algo is a series of lessons and lectures for schoolchildren on sports programming. Training is divided into parallel 5 depending on the level of difficulty. The course covers most of the algorithms that are used in Olympiads.
