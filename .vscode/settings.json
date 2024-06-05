@@ -5,6 +5,14 @@
         "functional": "cpp",
         "compare": "cpp",
         "cstdint": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "random": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "span": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "initializer_list": "cpp",
+        "format": "cpp"
     }
 }
