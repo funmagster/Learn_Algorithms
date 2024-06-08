@@ -7,5 +7,6 @@
    4. Greedy algorithms
    5. Binary Search
    6. Number theory
+   7. STL-2
 
 ---

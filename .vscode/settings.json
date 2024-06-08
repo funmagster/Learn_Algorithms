@@ -17,6 +17,11 @@
         "text_encoding": "cpp",
         "iomanip": "cpp",
         "ostream": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "*.tcc": "cpp",
+        "limits": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "unordered_set": "cpp"
     }
 }
