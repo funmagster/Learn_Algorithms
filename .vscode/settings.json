@@ -15,6 +15,7 @@
         "initializer_list": "cpp",
         "format": "cpp",
         "text_encoding": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "ostream": "cpp"
     }
 }
