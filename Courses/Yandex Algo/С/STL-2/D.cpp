@@ -1,7 +1,6 @@
-// debug needed
-
 #include <iostream>
-#include <unordered_map>
+#include <map>
+#include <vector>
 #include <set>
 #include <string>
 
@@ -15,8 +14,9 @@ int main(){
     unsigned long long n, e, m, k, s;
     string command;
     cin >> n >> m >> k;
-    unordered_map<unsigned long long, set<int>> num_to_set(n + 1);
-    unordered_map<unsigned long long, set<unsigned long long>> set_to_num(m + 1);
+
+    vector<set<unsigned long long>> set_to_num(m + 2);
+    map<unsigned long long, set<unsigned long long>> num_to_set;
     for (unsigned long long i = 0; i < k; i++){
         cin >> command;
         if (command == "ADD"){
@@ -26,10 +26,8 @@ int main(){
         }
         else if(command == "DELETE"){
             cin >> e >> s;
-            for (auto set_num : num_to_set[e]) {
-                set_to_num[set_num].erase(e);
-            }
-            num_to_set[e].clear();
+            set_to_num[s].erase(e);
+            num_to_set[e].erase(s);
         }
         else if(command == "CLEAR"){
             cin >> s;
@@ -61,4 +59,5 @@ int main(){
             cout << endl;
         }
     }
+    return 0;
 }
