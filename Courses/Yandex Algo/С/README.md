@@ -8,5 +8,6 @@
    5. Binary Search
    6. Number theory
    7. STL-2
+   8. Dynamic programming 1 (DP1)
 
 ---
