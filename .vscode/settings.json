@@ -23,6 +23,7 @@
         "map": "cpp",
         "set": "cpp",
         "unordered_set": "cpp",
-        "system_error": "cpp"
+        "system_error": "cpp",
+        "algorithm": "cpp"
     }
 }
