@@ -10,22 +10,18 @@ Conditions of the problem (in Russian):
 `A`
 
 [Link](https://informatics.msk.ru/mod/statements/view.php?id=211#1)
-
 ---
 `B`
 
 [Link](https://informatics.msk.ru/mod/statements/view.php?id=211&chapterid=82#1)
-
 ---
 `C`
 
 [Link](https://informatics.msk.ru/mod/statements/view.php?id=211&chapterid=84#1)
-
 ---
 `D`
 
 [Link](https://informatics.msk.ru/mod/statements/view.php?id=211&chapterid=85#1)
-
 ---
 `E`
 
