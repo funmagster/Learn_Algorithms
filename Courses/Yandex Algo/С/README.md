@@ -10,5 +10,7 @@
    7. STL-2
    8. Dynamic programming 1 (DP1)
    9. Dynamic programming 2 (DP2)
+   10. Combinatorics 1
+   11. Combinatorics 2
 
 ---
