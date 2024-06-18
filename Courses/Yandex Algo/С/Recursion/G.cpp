@@ -32,14 +32,14 @@ char findCharAtPosition(long long n, int k) {
         // left side
         return findCharAtPosition(n, k - 1);
     } else if (n > len_k_minus_1 && n <= len_k_minus_1 + middle_part_length) {
-        // middle part
+        // middle side
         if (n == len_k_minus_1 + 1) {
             return 'm';
         } else {
             return 'o';
         }
     } else {
-        // right part
+        // right side
         return findCharAtPosition(n - len_k_minus_1 - middle_part_length, k - 1);
     }
 }
