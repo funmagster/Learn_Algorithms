@@ -12,5 +12,6 @@
    9. Dynamic programming 2 (DP2)
    10. Combinatorics 1
    11. Combinatorics 2
+   12. Recursion
 
 ---
