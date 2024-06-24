@@ -15,5 +15,6 @@
    12. Recursion
    13. Graphs
    14. BFS
+   15. DFS2
 
 ---
