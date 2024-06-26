@@ -17,5 +17,6 @@
    14. BFS
    15. DFS2
    16. Shortest paths
+   17. Bit operations
 
 ---
