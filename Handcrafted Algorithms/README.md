@@ -1,3 +1,2 @@
-# Handcrafted Algorithms
-#### Here I manually write sports programming algorithms
-Explanation of the algorithms is given in Russian
+# ЕГЭ
+#### Здесь будут темлейты для решения задач ЕГЭ по информатике
